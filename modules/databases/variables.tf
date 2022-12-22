@@ -63,7 +63,7 @@ variable "redis_cluster_size" {
 variable "region" {
   type        = string
   description = "Name of the region to target"
-  default     = "ams3"
+  default     = "sfo3"
 }
 
 variable "vpc_name" {
