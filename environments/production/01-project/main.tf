@@ -1,7 +1,7 @@
 module "project" {
   source = "../../../modules/project"
 
-  project_name        = "toot.community"
-  project_description = "Project containing the toot.community platform"
+  project_name        = "whats-yacking-us"
+  project_description = "Project containing the us.whatsyacking.com platform"
   project_environment = "Production"
 }

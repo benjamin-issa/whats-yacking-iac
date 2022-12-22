@@ -1,6 +1,6 @@
 module "state" {
   source = "../../../modules/state"
 
-  state_name = "state-toot-community"
-  region     = "ams3"
+  state_name = "state-whatsyacking-us"
+  region     = "sfo3"
 }
