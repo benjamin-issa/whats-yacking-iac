@@ -11,7 +11,7 @@ variable "doks_cluster_version" {
 variable "region" {
   type        = string
   description = "Name of the region to target"
-  default     = "ams3"
+  default     = "sfo3"
 }
 
 variable "generic_pool_name" {
