@@ -30,11 +30,8 @@ resource "digitalocean_spaces_bucket" "this" {
 resource "digitalocean_certificate" "this" {
   count             = length(var.cdn_hostname) > 0 && length(var.existing_cdn_certificate) == 0 ? 1 : 0
   name              = "cf-origin-cert"
-  type              = "custom"
-  private_key       = file("../../../certificates/origin-cert.key")
-  leaf_certificate  = file("../../../certificates/origin-cert.crt")
-  certificate_chain = file("../../../certificates/origin_ca_rsa_root.pem")
-
+  type              = "lets_encrypt"
+  domains           = [var.cdn_hostname]
   lifecycle {
     ignore_changes = [
       private_key
